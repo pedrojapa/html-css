@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionando conteúdos</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+        :root {
+            --fonte:'Bebas Neue', cursive;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgba(254, 254, 158, 0.873);
+            
+        }
+        header {
+            font-family: var(--fonte);
+            text-align: center;
+            background-color: black;
+            color:white;
+            padding:5px;
+        }
+        main {
+            background-color:white;
+            padding:10px;
+        }
+        main > p {
+            text-align: justify;
+        }
+        footer {
+            background-color:black;
+            color:white;
+            text-align: center;
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+            padding-top: 1px;
+            padding-bottom:1px;
+        }
+        .video {
+            display: block;
+            margin: auto;
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Conteúdos dentro de iframes</h1>
+    </header>  
+    <main>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae atque, quibusdam aliquam ipsum non enim voluptas fuga, nihil iste ipsa esse cum odio vitae hic magni numquam in recusandae unde!</p>
+        <h2>Vídeos</h2>
+        <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/232955578?h=f465f0ecea" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+        <h2>Mapas do Google</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14701.186344041676!2d-43.184890434014754!3d-22.902429001889107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f58a6a00a9d%3A0x3f251d85272f76f7!2sHostnet%20Internet!5e0!3m2!1spt-BR!2sbr!4v1704752047486!5m2!1spt-BR!2sbr" width="790px" height="450px" class="video" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <h2>Mapas do Waze</h2>
+        <iframe src="https://embed.waze.com/iframe?zoom=16&lat=-22.902449&lon=-43.174591&ct=livemap" width="790px" height="450px" class="video" allowfullscreen></iframe>
+        <h2>Google Apresetações</h2>
+        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRCWnDv9oMUOe-n9B68HIIh308t_Q_NfUoZlV69VActUV17s2uuP3_A4olWaqZkxNtHNmAYu-QdHMHR/embed?start=false&loop=false&delayms=3000" frameborder="0" width="790px" height="450px" class="video" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    </main>
+    <footer>
+        <p>Criado por Pedro Henrique Ferreira Antunes para o CursoemVideo.</p>
+    </footer>
+</html>

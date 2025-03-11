@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+/* Todas as demais mídias */
+
+/* Pesquisar por: Typical Device Breakpoints:
+---------------------------------------------
+Pequenas Telas: até 600px
+Celular: de 600px - 768px
+Tablet: de 768px - 1024px
+Desktop: de 1025px - 1200px
+Grandes Telas: acima de 1200px
+---------------------------------------------
+*/
+
+@media print { /* IMPRESSÃO */
+    * {
+    font-family: 'Courier New', Courier, monospace;
+    }
+    body {
+        background-image: url(../imagens/back-print.jpg); /* Desnecessário */
+    }
+    main {
+        border: 2px solid black;
+    }
+    main h1 {
+        text-shadow: none;
+        color: black;
+    }
+    main::after {
+        content:'Essa impressão foi feita por Pedro Henrique Ferreira Antunes.';
+        text-decoration: overline;
+        text-align: center;
+        width: 90vw;
+    }
+
+    img#tablet {display: none;}
+    img#phone {display: none;}
+    img#pc {display: none;}
+    img#tv {display: none;}
+    img#print {display: block;}
+
+}
+@media screen and (min-width: 768px) and (max-width:1024px) { /* TABLETS */
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+
+    img#tablet {display: block;}
+    img#phone {display: none;}
+    img#pc {display: none;}
+    img#tv {display: none;}
+    img#print {display: none;}
+
+}
+@media screen and (min-width: 1025px) and (max-width: 1200px) { /* DESKTOPS */
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+
+    img#tablet {display: none;}
+    img#phone {display: none;}
+    img#pc {display: block;}
+    img#tv {display: none;}
+    img#print {display: none;}
+
+}
+@media screen and (min-width: 1201px) { /* GRANDES TELAS */
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+    }
+
+    img#tablet {display: none;}
+    img#phone {display: none;}
+    img#pc {display: none;}
+    img#tv {display: block;}
+    img#print {display: none;}
+
+}
